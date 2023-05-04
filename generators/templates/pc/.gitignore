@@ -1,0 +1,14 @@
+*.log*
+.cache
+.DS_Store
+.idea
+.VSCodeCounter
+# npm
+node_modules
+
+# test
+
+
+# dist file
+dist
+changelog.generated.md

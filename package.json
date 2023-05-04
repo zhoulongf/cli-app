@@ -1,21 +1,47 @@
 {
-  "name": "cli-app",
+  "name": "cli-app-zlf",
   "version": "1.0.0",
   "description": "Create Cli App",
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": {
     "create-cli-app": "lib/index.js"
   },
   "scripts": {
+    "dev": "tsc --watch",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhoulongf/cli-app.git"
-  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "zhoulf",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "generators"
+  ],
+  "devDependencies": {
+    "@types/fs-extra": "^8.1.0",
+    "@types/yeoman-generator": "^3.1.4",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "release-it": "^13.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "child_process": "^1.0.2",
+    "consola": "^2.11.3",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.6",
+    "yeoman-environment": "^2.8.0",
+    "yeoman-generator": "^4.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "bugs": {
     "url": "https://github.com/zhoulongf/cli-app/issues"
   },
